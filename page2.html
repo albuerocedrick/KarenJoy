@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Karen Joy ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Stack elements vertically */
+            height: 100vh; /* Ensure full height for proper centering */
+        }
+
+        .container img {
+            max-width: 80%; /* Prevent images from being too large */
+            height: auto;
+            display: block;
+            margin: 10px auto; /* Center images and add spacing */
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 id="message">Tadaaa!!! Since we're far from each other, here's a digital bouquet just for you. Please click the bouquet</h1> 
+        <img id="bouquet" src="bouquet.png" alt="Bouquet" class="clickable" width="450px">
+        <img id="envelope" src="envelope.png" alt="Envelope" class="hidden clickable" width="500px">
+    </div>
+    
+    <script>
+        document.getElementById('bouquet').addEventListener('click', function() {
+            this.style.display = 'none';
+            document.getElementById('envelope').classList.remove('hidden');
+            document.getElementById('message').innerText = "Hehehehe letter para sayo, Click mo yung envelope Joyjoyy ✉️"; // Text changes here
+        });
+
+        document.getElementById("bouquet").addEventListener("click", function() {
+            document.getElementById("envelope").style.display = "block";
+        });
+
+        document.getElementById('envelope').addEventListener('click', function() {
+            window.location.href = 'page3.html';
+        });
+    </script>
+</body>
+</html>

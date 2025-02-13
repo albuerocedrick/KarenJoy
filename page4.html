@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Karen Joy ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Would you like to watch a movie with me? 🎥❤️</h1>
+        <button id="yes-btn">Yes! 🍿</button>
+        <button id="no-btn">No 😢</button>
+    </div>
+    
+    <script>
+        document.getElementById('yes-btn').addEventListener('click', function() {
+            window.location.href = 'movie-selection.html';
+        });
+        
+        document.getElementById('no-btn').addEventListener('click', function() {
+            window.location.href = 'rejection-message.html';
+        });
+    </script>
+</body>
+</html>

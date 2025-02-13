@@ -1,0 +1,128 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #FFE4E1;
+    color: #D63384;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 50px;
+}
+
+button {
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #D63384;
+}
+
+@keyframes floating-hearts {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+.heart {
+    position: absolute;
+    bottom: -10px;
+    font-size: 24px;
+    color: #FF69B4;
+    animation: floating-hearts 5s linear infinite;
+}
+
+/* Movie Selection Page Styling */
+.movie-selection {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.movie-selection h2 {
+    color: #FF4081;
+    margin-bottom: 15px;
+}
+
+.movie-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.movie-options label {
+    background: #FFD1DC;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    transition: 0.3s;
+}
+
+.movie-options label:hover {
+    background: #FFB6C1;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Dropdown & Textbox Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+select, input[type="text"], input[type="time"] {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #FF69B4;
+    border-radius: 10px;
+    background: #FFF0F5;
+    font-size: 16px;
+    color: #D63384;
+    outline: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+select:hover, input[type="text"]:hover, input[type="time"]:hover {
+    border-color: #D63384;
+    background: #FFD1DC;
+}
+
+select:focus, input[type="text"]:focus, input[type="time"]:focus {
+    border-color: #D63384;
+    background: #FFE4E1;
+}
+
+#envelope {
+    display: none;
+}
+
+.bouquet.clicked + #envelope {
+    display: block;
+}
+

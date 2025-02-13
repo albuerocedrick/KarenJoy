@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Confirmation 🎬</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Here are your movie choices! 🎥❤️</h1>
+        <p><strong>Selected Movie:</strong> <span id="selected-movie"></span></p>
+        <p><strong>Custom Movie Choice:</strong> <span id="custom-movie"></span></p>
+        <p><strong>Preferred Time:</strong> <span id="selected-time"></span></p>
+        
+        <p>Please take a screenshot of this page and send it to my Messenger. 😊</p>
+        
+        <button id="final-page-btn">Continue ❤️</button>
+    </div>
+    
+    <script>
+        document.getElementById('selected-movie').textContent = localStorage.getItem('movie');
+        document.getElementById('custom-movie').textContent = localStorage.getItem('customMovie');
+        document.getElementById('selected-time').textContent = localStorage.getItem('time');
+        
+        document.getElementById('final-page-btn').addEventListener('click', function() {
+            window.location.href = 'final-thank-you.html';
+        });
+    </script>
+</body>
+</html>

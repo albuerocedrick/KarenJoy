@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Selection 🎬</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Select Your Movie Choice 🍿</h1>
+        <form id="movie-form">
+            <div>
+                <label for="movie">Choose a Movie:</label>
+                <select id="movie" name="movie">
+                    <option value="Kinda Pregnant">Kinda Pregnant</option>
+                    <option value="One Day">One Day</option>
+                    <option value="Love at First Sight">Love at First Sight</option>
+                </select>
+            </div>
+            <div>
+                <label for="custom-movie">Your Own Choice (Optional):</label>
+                <input type="text" id="custom-movie" name="custom-movie" placeholder="Type your movie here">
+            </div>
+            <div>
+                <label for="time">Preferred Time:</label>
+                <input type="time" id="time" name="time">
+            </div>
+            <div>
+                <button type="button" id="submit-btn">Submit 🎬</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            const movie = document.getElementById('movie').value;
+            const customMovie = document.getElementById('custom-movie').value || 'None';
+            const time = document.getElementById('time').value;
+            
+            localStorage.setItem('movie', movie);
+            localStorage.setItem('customMovie', customMovie);
+            localStorage.setItem('time', time);
+            
+            window.location.href = 'movie-confirmation.html';
+        });
+    </script>
+</body>
+</html>
